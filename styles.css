@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#gameboard {
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px black;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: solid 2px black;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  border: 13px solid blue;
+  box-sizing: border-box;
+}
+
+.cross {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  rotate: 45deg;
+}
+
+.cross::before,
+.cross::after {
+  content: "";
+  position: absolute;
+  background-color: red;
+}
+
+.cross::before {
+  width: 100%;
+  height: 20px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.cross::after {
+  width: 20px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.winning-square {
+  position: relative;
+}
+
+.winning-square.horizontal::after,
+.winning-square.vertical::after,
+.winning-square.diagonal-left::after,
+.winning-square.diagonal-right::after {
+  content: "";
+  position: absolute;
+  background-color: green;
+}
+
+.winning-square.horizontal::after {
+  width: 100%;
+  height: 5px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.winning-square.vertical::after {
+  width: 5px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.winning-square.diagonal-left::after {
+  width: 141%;
+  height: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.winning-square.diagonal-right::after {
+  width: 141%;
+  height: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
