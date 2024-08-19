@@ -16,3 +16,5 @@ Como não depende de nenhum framework, apenas crie:
 - styles.css
 
 Deixe tudo na mesma página e abra o arquivo index.html no navegador e pronto. Pode jogar.
+
+Jogue online em: https://jogodavelha3.netlify.app
