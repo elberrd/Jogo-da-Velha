@@ -6,22 +6,24 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  background-color: black;
+  color: white;
 }
 
 #gameboard {
   width: 300px;
   height: 300px;
-  background-color: black;
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
-  border: solid 1px black;
+  border: solid 1px white;
 }
 
 .square {
   width: 100px;
   height: 100px;
-  background-color: white;
-  border: solid 2px black;
+  background-color: black;
+  border: solid 2px white;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -31,9 +33,9 @@ body {
 .circle {
   width: 80px;
   height: 80px;
-  background-color: white;
+  background-color: black;
   border-radius: 50%;
-  border: 13px solid blue;
+  border: 13px solid rgb(72, 72, 242);
   box-sizing: border-box;
 }
 
@@ -48,7 +50,7 @@ body {
 .cross::after {
   content: "";
   position: absolute;
-  background-color: red;
+  background-color: rgb(253, 88, 88);
 }
 
 .cross::before {
@@ -77,7 +79,7 @@ body {
 .winning-square.diagonal-right::after {
   content: "";
   position: absolute;
-  background-color: green;
+  background-color: rgb(30, 146, 30);
 }
 
 .winning-square.horizontal::after {
